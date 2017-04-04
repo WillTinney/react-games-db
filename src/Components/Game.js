@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import GameListItem from './GameListItem';
+// import GameListItem from './GameListItem';
 
-class Games extends Component {
+class Game extends Component {
   render() {
     let gameListItems;
     if(this.props.games) {
@@ -19,8 +19,8 @@ class Games extends Component {
   }
 }
 
-Games.propType = {
+Game.propType = {
   games: React.PropTypes.array
 }
 
-export default Games;
+export default Game;
