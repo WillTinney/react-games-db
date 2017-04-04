@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import $ from 'jquery';
-import Header from './Components/Header';
+import Searchbar from './Components/Searchbar';
 import Game from './Components/Game';
-// import logo from './logo.svg';
 import './styles/App.css';
 
 class App extends Component {
@@ -65,17 +64,25 @@ class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <Header />
-        <div className="container card">
-          <Game game={this.state} />
-        </div>
-        <div className="footer">
-          Developed by William Tinney using ReactJS</a>
-          <div className="db-logo">
-            <a href="https://www.giantbomb.com/api/" target="blank">
-              <p>Powered by</p>
-              <img src="https://static.giantbomb.com/uploads/original/0/8991/2217314-giantbomblogo_vector2.png" alt="giant-bomb" height="105" width="110" />
-            </a>
+        <div className="container">
+          <div className="header">
+            <div>
+              <h1>Video Game Db</h1>
+            </div>
+            <Searchbar />
+          </div>
+          <div className="card">
+            <Game game={this.state} />
+          </div>
+          <div className="footer">
+            <a href="" target="blank">Developed by Will Tinney using ReactJS</a>
+            <br/>
+            <div className="db-logo">
+              <a href="https://www.giantbomb.com/api/" target="blank">
+                <p>Powered by</p>
+                <img src="https://static.giantbomb.com/uploads/original/0/8991/2217314-giantbomblogo_vector2.png" alt="giant-bomb" height="105" width="110" />
+              </a>
+            </div>
           </div>
         </div>
       </div>

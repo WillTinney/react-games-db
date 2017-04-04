@@ -19,49 +19,120 @@
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#app {
+  animation: fadein ease-out 1.4s;
 }
 
 .wrapper {
-  background: linear-gradient(-225deg, rgba(0,41,68,0.2) 0%, rgba(0,16,31,0.2) 50%), url(https://images6.alphacoders.com/309/309983.jpg);
+  background: linear-gradient(-225deg, rgba(0, 41, 68, 0.4) 0%, rgba(0, 16, 31, 0.4) 50%), url(https://images6.alphacoders.com/309/309983.jpg);
   background-size: cover;
 }
 
 .header {
-  padding: 30px 0;
+  padding: 0 0 15px 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-.db-logo {
+
+.header h1 {
+  color: #FEFE78; /*color: #1e1e2d;*/
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  font-size: 22px;
+  padding: 12px 6px 8px 6px;
+  border: 3px dashed #FEFE78;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.searchbar-container {
+  margin-top: 15px;
+  width: 48%;
+  background: none; /* rgba(0,0,15,0.6); */
+}
+
+.searchbar-container label {
+  width: 100%;
   position: relative;
 }
-.db-logo p {
+
+/*.searchbar-container label:before {
+  color: #00EC76;
+  content: "\f4a4";
+  font-family: Ionicons;
   position: absolute;
-  top: 0;
-  left: 20px;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-weight: lighter;
+  bottom: 2px;
+  left: 0;
+  font-size: 22px;
+}*/
+
+.searchbar-container .form-control {
+  animation: fadein ease-in 0.5s;
+  font-size: 18px;
+  color: #E0ECEA;
+  border: none;
+  border-radius: 0;
+}
+.searchbar {
+  width: 100%;
+  background: none;
+  border-bottom: solid 1px #E0ECEA !important;
+}
+
+input::-webkit-input-placeholder {
+  color: #E0ECEA;
+}
+
+input::-moz-placeholder {
+  color: #E0ECEA;
+}
+
+input:-moz-placeholder {
+  color: #E0ECEA;
+}
+
+input:-ms-input-placeholder {
   color: #E0ECEA;
 }
 
 .card {
-  background: rgba(0,0,15,0.8);
+  background: rgba(0, 0, 15, 0.6);
   background-size: cover;
+  min-height: 800px;
   height: 100%;
   padding: 50px;
 }
+
+.container:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
 .card h1 {
   font-size: 32px;
   font-weight: bold;
   color: white;
 }
+
 .card h2 {
   font-size: 26px;
   font-weight: bold;
   color: #00EC76;
 }
+
 .card h4 {
   font-size: 26px;
   font-weight: bold;
@@ -69,18 +140,28 @@
   margin-top: 10px;
   margin-bottom: 25px;
 }
+
 .card h3 {
   font-size: 20px;
   color: #E0ECEA;
   margin-top: 10px;
 }
+
 .card p {
   font-size: 16px;
   color: #E0ECEA;
 }
 
 .game-image {
-  margin: auto;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  .game-image {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
 
 .card-details .col-sm-6 {
@@ -94,4 +175,22 @@
   justify-content: center;
   align-items: center;
   padding: 30px;
+}
+
+.footer a {
+  color: white;
+  font-weight: bold;
+}
+
+.db-logo {
+  position: relative;
+}
+
+.db-logo p {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #E0ECEA;
 }
