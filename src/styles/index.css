@@ -15,6 +15,21 @@ body {
   overflow-y: auto;
 }
 
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #E0ECEA !important;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #E0ECEA !important;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #E0ECEA !important;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #E0ECEA !important;
+}
+
 input[type="text"], input[type="text"]:focus {
   outline: 0;
   border:none;

@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "node-sass": "^4.5.2",
+    "onsenui": "^2.2.1",
+    "react-onsenui": "^1.2.0",
     "react-scripts": "0.9.5"
   },
   "scripts": {

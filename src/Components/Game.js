@@ -4,11 +4,16 @@ class Game extends Component {
   orderDate(date) {
     date.slice(0,9)
   }
+
   render() {
 
     console.log('before if');
     if (this.props.game.response === undefined) { // (!this.props.game.response)
-      return <h1>API has not loaded yet</h1>
+      return (
+        <div className="load-container">
+          <div className="loader"></div>
+        </div>
+      )
       // Put in spinner
     }
     console.log('after if');
