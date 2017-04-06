@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import $ from 'jquery';
 import Searchbar from './Components/Searchbar';
 import Game from './Components/Game';
+import FaGithub from 'react-icons/lib/fa/github';
 import './styles/App.css';
 
 class App extends Component {
@@ -75,7 +76,7 @@ class App extends Component {
             <Game game={this.state} />
           </div>
           <div className="footer">
-            <a href="" target="blank">Developed by Will Tinney using ReactJS</a>
+            <a href="" target="blank"><FaGithub id="github-icon"/>Developed by Will Tinney using ReactJS</a>
             <br/>
             <div className="db-logo">
               <a href="https://www.giantbomb.com/api/" target="blank">

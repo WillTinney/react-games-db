@@ -14,7 +14,6 @@ class Game extends Component {
           <div className="loader"></div>
         </div>
       )
-      // Put in spinner
     }
     console.log('after if');
     console.log(this.props.game.image)
