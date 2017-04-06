@@ -38,6 +38,7 @@ class App extends Component {
         console.log('API success!');
         this.setState({
           response: 'OK',
+          gameURL: data.results.api_detail_url,
           title: data.results.name,
           image: data.results.image,
           deck: data.results.deck,
@@ -70,7 +71,7 @@ class App extends Component {
             <div>
               <h1>Video Game Db</h1>
             </div>
-            <Searchbar />
+            <Searchbar searchGame={this.getGame.bind(this)}/>
           </div>
           <div className="card">
             <Game game={this.state} />

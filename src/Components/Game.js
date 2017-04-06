@@ -8,7 +8,7 @@ class Game extends Component {
   render() {
 
     console.log('before if');
-    if (this.props.game.response === undefined) { // (!this.props.game.response)
+    if (!this.props.game.response) {
       return (
         <div className="load-container">
           <div className="loader"></div>

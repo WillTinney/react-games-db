@@ -29,12 +29,13 @@ class Searchbar extends Component {
 
   handleChange(e) {
     this.setState({search: e.target.value})
-    this.searchGames(e.target.value);
+    this.searchGames(e.target.value)
   }
 
   chooseSuggestion(gameURL) {
-    console.log(gameURL);
-
+    this.props.searchGame(gameURL)
+    this.setState({search: '', suggestions: ''})
+    this.refs.search.value = ''
   }
 
   render() {
@@ -43,12 +44,10 @@ class Searchbar extends Component {
         <FaSearch id="search-icon" />
         <form>
           <label>
-            <input onChange={this.handleChange.bind(this)} className="searchbar form-control" type="text" placeholder="Search Game Title..." />
+            <input ref="search" onChange={this.handleChange.bind(this)} className="searchbar form-control" type="text" placeholder="Search Game Title..." />
           </label>
         </form>
-          <div className="suggestions">
-            <Suggestions chooseSuggestion={this.chooseSuggestion.bind(this)} suggestions={this.state.suggestions} />
-          </div>
+        <Suggestions chooseSuggestion={this.chooseSuggestion.bind(this)} suggestions={this.state.suggestions} />
       </div>
     )
   }

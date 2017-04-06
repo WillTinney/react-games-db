@@ -8,11 +8,10 @@ class Suggestions extends Component {
   render() {
     let suggestions = this.props.suggestions;
     if (!suggestions) {
-      return <p className="suggestion">No suggestions</p>; /* null */
+      return null;
     }
-    console.log('Suggestions:', this.props.suggestions.map(suggestion => suggestion.name))
     return (
-      <div>
+      <div className="suggestion-container">
         {suggestions.map(suggestion => {
           return <p className="suggestion" onClick={this.handleClick.bind(this, suggestion.api_detail_url)} key={suggestion.id}>{suggestion.name}</p>
         })}
